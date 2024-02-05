@@ -3,16 +3,22 @@ import type { RouteProp } from '@react-navigation/native';
 
 export interface ITodo {
   title: string;
+  description: string;
   id: string;
   completed: boolean;
 }
 
 export interface IInitialState {
   todos: ITodo[];
+  todo: ITodo;
+  modalType: string;
+  targetTodoId: string;
+  query: string;
+  isVisible: boolean;
 }
 
 export interface ITodoState {
-  todo: { todos: ITodo[] };
+  todo: IInitialState;
 }
 
 export type RootStackParamList = {
@@ -20,5 +26,5 @@ export type RootStackParamList = {
   Details: ITodo;
 };
 
-export type DetailsScreenProp = RouteProp<RootStackParamList, 'Details'>;
+export type DetailsRouteProp = RouteProp<RootStackParamList, 'Details'>;
 export type ListScreenNavProp = NativeStackNavigationProp<RootStackParamList, 'TodoLists'>;
