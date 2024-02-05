@@ -1,28 +1,43 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native';
-import React from 'react';
+
+// Import local files
 import TodoItem from './TodoItem';
-import { selectTodos } from '../redux/todoSlice/todoSlice';
+import { selectQuery } from '../redux/todoSlice/todoSlice';
 import { useAppSelector } from '../hooks/hooks';
 
-const TodoList = () => {
-  const todos = useAppSelector(selectTodos);
+// Import types
+import { ITodo } from '../types';
+
+const TodoList = ({ todos }: { todos: ITodo[] }) => {
+  const query = useAppSelector(selectQuery);
+  const renderTodos = ({ item }: { item: ITodo }) => {
+    return <TodoItem item={item} />;
+  };
+
+  todos = todos.filter((todo) => todo.title.toLowerCase().includes(query.toLowerCase()));
 
   return (
-    <FlatList
-      style={styles.listContainer}
-      data={todos}
-      keyExtractor={(item) => item.id}
-      renderItem={({ item }) => {
-        return <TodoItem item={item} />;
-      }}
-    />
+    <>
+      {todos.length > 0 ? (
+        <FlatList data={todos} keyExtractor={(item) => item.id} renderItem={renderTodos} />
+      ) : (
+        <View style={styles.container}>
+          <Text style={styles.text}>There is no todo lists.</Text>
+        </View>
+      )}
+    </>
   );
 };
 
 export default TodoList;
 
 const styles = StyleSheet.create({
-  listContainer: {
-    flex: 2,
+  container: {
+    flex: 1,
+  },
+  text: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
