@@ -148,6 +148,6 @@ I would like to thank [Quibit](https://www.facebook.com/quibit21092023) for givi
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/K0ppai/Quibit-Test/blob/develop/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
