@@ -1,4 +1,4 @@
-import { Button, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 // Import local files
 import { selectTodos } from '../redux/todoSlice/todoSlice';

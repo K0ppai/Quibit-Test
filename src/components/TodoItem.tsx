@@ -40,7 +40,7 @@ const TodoItem = ({ item }: { item: ITodo }) => {
       >
         <View style={styles.boxContainer}>
           <BouncyCheckbox
-            isChecked={false}
+            isChecked={item.completed}
             fillColor='green'
             style={styles.checkBox}
             onPress={() => dispatch(updateTodoStatus(item.id))}

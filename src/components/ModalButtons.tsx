@@ -11,6 +11,8 @@ import {
 } from '../redux/todoSlice/todoSlice';
 import { useAppDispatch, useAppSelector } from '../hooks/hooks';
 import { colors } from '../utils/colors';
+
+// Import types
 import { ITodo } from '../types';
 
 const ModalButtons = ({ modalType, disabled }: { modalType: string; disabled: boolean }) => {
