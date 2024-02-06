@@ -35,7 +35,7 @@
 
 # 📖 Todo List <a name="about-project"></a>
 
-**Todo List** is a code test given to me by [Quibit](https://www.facebook.com/quibit21092023). It's a simple todo list application that allows users to add, delete and update their tasks.
+**Todo List** is a code test given to me by [Quibit](https://www.facebook.com/quibit21092023). It's a simple todo list application that allows users to add, delete and update their tasks along with the search feature.
 
 ## 🛠 Built With <a name="built-with"></a>
 
