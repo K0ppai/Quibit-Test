@@ -6,10 +6,10 @@
 
 </div>
 
-<div align="center">
-  <img src="./assets/ss3.jpg" height="300" />
-  <img src="./assets/ss2.jpg" height="300" />
-  <img src="./assets/ss1.jpg" height="300" />
+<div align="center" style="display: flex; justify-content: space-around;">
+  <img src="./assets/ss3.jpg" height="400" />
+  <img src="./assets/ss2.jpg" height="400" />
+  <img src="./assets/ss1.jpg" height="400" />
 </div>
 <!-- TABLE OF CONTENTS -->
 
